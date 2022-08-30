@@ -17,7 +17,7 @@ dds <- DESeq(dds)
 res <- results(dds)
 resdata <- merge(as.data.frame(res), as.data.frame(counts(dds, normalized=TRUE)),by="row.names",sort=TRUE)
 resultsNames(dds)
-resTet3KO<-results(dds, contrast=c("treatment", "Tet3KO", "control"))  # 把实验组分别和control比较
+resTet3KO<-results(dds, contrast=c"treatment", "Tet3KO", "control"))  # 把实验组分别和control比较
 resTet2KO<-results(dds, contrast=c("treatment", "Tet2KO", "control"))
 resTet1KO<-results(dds, contrast=c("treatment", "Tet1KO", "control"))
 
